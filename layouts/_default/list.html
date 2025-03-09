@@ -17,7 +17,7 @@
 		{{ with .Content }}{{ . }}{{ end }}
 
 		<ul class="posts">
-			{{- range .Data.Pages -}}
+			{{- range .RegularPagesRecursive -}}
 			{{- if (in (.Site.Params.excludedTypes | default (slice "page")) .Type) -}}
 			{{- else -}}
 			<li class="post">
